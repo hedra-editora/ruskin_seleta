@@ -19,14 +19,21 @@
 \setcounter{tocdepth}{0}
 
 
+\pagebreak
+\begingroup \footnotesize \parindent0pt \parskip 5pt \thispagestyle{empty} \vspace*{-0.5\textheight}\mbox{} \vfill
+\baselineskip=.92\baselineskip
+\input{PRETAS.tex}
+\endgroup
+\pagebreak
 % \renewcommand{\contentsname}{Índex} 	% Trocar nome do sumário para 'Índex'
-\ifodd\thepage\relax\else\blankpage\fi 	% Verifica se página é par e coloca página branca
-\tableofcontents*
+%\ifodd\thepage\relax\else\blankpage\fi 	% Verifica se página é par e coloca página branca
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\tableofcontents*\clearpage
 
 
 \frontmatter
 
-%\input{INTRO.tex}
+\input{INTRO.tex}
 
 \mainmatter
 
