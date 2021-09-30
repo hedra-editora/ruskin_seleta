@@ -21,7 +21,7 @@
   \hrule width \textwidth height .2pt
   \kern 2.6\p@}}}
 
-\DeclareOption{chicagofootnotes}{\renewcommand{\footnoterule}{\vfill}
+\DeclareOption{chicagofootnotes}{
   \renewcommand\@makefntext[1]{\frenchspacing 
     \parindent 0em% 
     \@thefnmark.~#1}
@@ -30,10 +30,5 @@
     }
 
 \ProcessOptions%
-
-
- %reset das notas
-  \pretocmd{\@schapter}{\setcounter{footnote}{0}}{}{}
-  \pretocmd{\@chapter}{\setcounter{footnote}{0}}{}{}
 
 
