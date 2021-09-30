@@ -16,7 +16,7 @@
 \setcounter{tocdepth}{0}
 
 % \renewcommand{\contentsname}{Índex} 	% Trocar nome do sumário para 'Índex'
-\ifodd\thepage\relax\else\blankpage\fi 	% Verifica se página é par e coloca página branca
+%\ifodd\thepage\relax\else\blankpage\fi 	% Verifica se página é par e coloca página branca
 %\tableofcontents*
 
 \pagebreak
@@ -30,11 +30,23 @@
 \pagestyle{empty} 
 % \renewcommand{\contentsname}{Índex} 	% Trocar nome do sumário para 'Índex'
 %\ifodd\thepage\relax\else\blankpage\fi 	% Verifica se página é par e coloca página branca
-\addtocontents{toc}{\protect\thispagestyle{empty}}
+\addtocontents{toc}{\protect\thispagestyle{empty}}\vspace*{-.01\textheight}\parindent=0pt 
+			  
+			  {\formular
+              \Huge 
+              \textbf{Pr\ae terita}\baselineskip=.67\baselineskip }
+
+              \vspace{15mm}
+              
+              {\brabo\LARGE
+              John Ruskin}
+              
+              \vspace{5cm}
+
 \tableofcontents*\clearpage\endgroup}
 
 \input{INTRODUCAO}
 \input{TEXTO}
 
-%\input{Y-publicidade}	   % [lista de livros publicados]
+\input{Y-publicidade}	   % [lista de livros publicados]
 \input{Z-colofon}		   % [colofon]
